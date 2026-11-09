@@ -23,13 +23,13 @@ Inlämning: fredag 13 november på Learnpoint
 ## 🔍 Del 2: SQL-frågor i DataGrip
 - [x] Visa rum i en ort (JOIN)
 - [x] Sök lediga rum (NOT EXISTS)
-- [ ] Filter (pool, restaurang, avstånd) och sortering (pris, omdöme)  ⬅️ HÄR
-- [ ] Lägga till kund och visa kunder
-- [ ] Skapa bokning
-- [ ] Visa kundens bokningar med totalpris
-- [ ] Ändra antal personer
-- [ ] Avboka
-- [ ] Spara alla frågor i `sql/queries.sql`
+- [x] Filter (pool, restaurang, avstånd) och sortering (pris, omdöme)  ⬅️ HÄR
+- [x] Lägga till kund och visa kunder
+- [x] Skapa bokning
+- [x] Visa kundens bokningar med totalpris
+- [x] Ändra antal personer
+- [x] Avboka
+- [x] Spara alla frågor i `sql/queries.sql`
 
 ## 💻 Del 3: C#-programmet
 - [ ] Skapa projektet och koppla till databasen
