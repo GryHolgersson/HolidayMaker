@@ -1,19 +1,29 @@
 -- Holiday Maker: testdata. 
 USE holiday_maker;
 
+
+-- Töm alla tabeller först, så att filen kan köras flera gånger
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE Booking;
+TRUNCATE TABLE Room;
+TRUNCATE TABLE Accommodation;
+TRUNCATE TABLE Customer;
+TRUNCATE TABLE Location;
+SET FOREIGN_KEY_CHECKS = 1;
+
 -- Orter
 INSERT INTO Location (city) VALUES
-('Malmö'),      -- id 1
-('Göteborg'),   -- id 2
-('Visby');      -- id 3
+('Edinburgh'),  -- id 1
+('Orlando'),    -- id 2
+('Kreta');      -- id 3
 
 -- Boenden: namn, ort, pool, restaurang, strand (m), centrum (m), omdöme, beskrivning
 INSERT INTO Accommodation (name, location_id, pool, restaurant, beachDistance, cityCenterDistance, rating, description) VALUES
-('Hotell Solsken',    1, 1, 1,  300,  800, 5, 'Lyxhotell nära Ribersborg'),   -- id 1
-('Pensionat Måsen',   1, 0, 0, 1500,  200, 3, 'Litet och billigt i centrum'), -- id 2
-('Havsbris Hotell',   2, 1, 0,  100, 2500, 4, 'Precis vid havet'),            -- id 3
-('Stadshotellet',     2, 0, 1, 3000,   50, 4, 'Mitt i stan'),                 -- id 4
-('Strandvillan',      3, 1, 1,   50, 1200, 2, 'Enkelt boende vid stranden');  -- id 5
+('Royal Mile Hotel',        1, 0, 1,  5000,  200, 4, 'Mitt på Royal Mile nära slottet'), -- id 1
+('Castle View Guesthouse',  1, 0, 0,  6000,  800, 3, 'Mysigt pensionat med slottsutsikt'), -- id 2
+('Sunshine Resort Orlando', 2, 1, 1, 85000, 8000, 5, 'Stort resort nära nöjesparkerna'), -- id 3
+('Lake Eola Inn',           2, 1, 0, 90000,  300, 3, 'Enkelt hotell i centrala Orlando'), -- id 4
+('Chania Beach Villa',      3, 1, 1,    50, 1200, 2, 'Enkelt boende vid stranden');       -- id 5
 
 -- Rum: boende, rumsnummer, max personer, pris per natt
 INSERT INTO Room (accommodation_id, roomNumber, capacity, pricePerNight) VALUES
@@ -33,10 +43,10 @@ INSERT INTO Room (accommodation_id, roomNumber, capacity, pricePerNight) VALUES
 (4, 'A2',  2, 1400.00),   -- rum id 14
 (4, 'B1',  2, 1450.00),   -- rum id 15
 (4, 'B2',  4, 2300.00),   -- rum id 16
-(5, 'Sjöstjärnan', 2, 980.00),  -- rum id 17
-(5, 'Snäckan',     2, 950.00),  -- rum id 18
-(5, 'Tången',      4, 1600.00), -- rum id 19
-(5, 'Bryggan',     1, 600.00);  -- rum id 20
+(5, 'Olive',   2,  980.00),  -- rum id 17
+(5, 'Lemon',   2,  950.00),  -- rum id 18
+(5, 'Sunset',  4, 1600.00),  -- rum id 19
+(5, 'Harbour', 1,  600.00);  -- rum id 20
 
 -- Kunder (påhittade)
 INSERT INTO Customer (firstName, lastName, email, phoneNumber) VALUES
