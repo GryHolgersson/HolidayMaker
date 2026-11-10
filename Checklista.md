@@ -32,8 +32,8 @@ Inlämning: fredag 13 november på Learnpoint
 - [x] Spara alla frågor i `sql/queries.sql`
 
 ## 💻 Del 3: C#-programmet
-- [ ] Skapa projektet och koppla till databasen
-- [ ] Meny: registrera och välja kund
+- [x] Skapa projektet och koppla till databasen
+- [x] Meny: registrera och välja kund
 - [ ] Meny: sök lediga rum (med filter och sortering)
 - [ ] Meny: boka (kolla tillgänglighet igen innan sparning)
 - [ ] Meny: visa bokningar
