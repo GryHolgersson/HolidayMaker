@@ -53,4 +53,5 @@ Inlämning: fredag 13 november på Learnpoint
 
 ## 📝 Del 5: Inlämning
 - [ ] Uppdatera ER-diagrammet och exportera som PDF/bild
-- [ ] README: hur man
+- [ ] README
+- [ ] Reflektion
