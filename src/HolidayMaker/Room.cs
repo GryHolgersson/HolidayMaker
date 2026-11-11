@@ -98,7 +98,7 @@ public static class Rooms
         return new RoomSearch(checkIn, checkOut, guests, rooms);
     }
 
-    // Skriver ut sökresultatet som en tabell.
+    // Skriver ut sökresultatet som en numrerad tabell (1, 2, 3 ...).
     private static void PrintRooms(List<AvailableRoom> rooms, DateOnly checkIn, DateOnly checkOut)
     {
         Console.WriteLine();
@@ -111,14 +111,15 @@ public static class Rooms
         int nights = checkOut.DayNumber - checkIn.DayNumber;
         Console.WriteLine($"{rooms.Count} lediga rum, {checkIn} till {checkOut} ({nights} nätter):");
         Console.WriteLine();
-        Console.WriteLine($"{"Rum-ID",-7}{"Boende",-25}{"Ort",-11}{"Rum",-13}{"Platser",8}{"Pris/natt",11}{"Totalt",10}{"Omdöme",8}");
-        Console.WriteLine(new string('-', 93));
+        Console.WriteLine($"{"Nr",-4}{"Boende",-25}{"Ort",-11}{"Rum",-13}{"Platser",8}{"Pris/natt",11}{"Totalt",10}{"Omdöme",8}");
+        Console.WriteLine(new string('-', 90));
 
-        foreach (var room in rooms)
+        for (int i = 0; i < rooms.Count; i++)
         {
+            var room = rooms[i];
             decimal total = nights * room.PricePerNight;
             Console.WriteLine(
-                $"{room.RoomId,-7}{room.Accommodation,-25}{room.City,-11}{room.RoomNumber,-13}" +
+                $"{i + 1,-4}{room.Accommodation,-25}{room.City,-11}{room.RoomNumber,-13}" +
                 $"{room.Capacity,8}{room.PricePerNight,11:N0}{total,10:N0}{room.Rating,8}");
         }
     }

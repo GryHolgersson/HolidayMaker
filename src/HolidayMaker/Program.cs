@@ -50,7 +50,13 @@ while (running)
 
             case 3:
                 var search = await Rooms.SearchAsync();
-                // Bokningen lägger vi till i nästa steg
+                if (search.Rooms.Count > 0)
+                {
+                    if (customerId == null)
+                        Console.WriteLine("Välj eller registrera en kund (val 1 eller 2) för att kunna boka.");
+                    else
+                        await Bookings.CreateAsync(customerId.Value, search);
+                }
                 break;
 
             case 0:
