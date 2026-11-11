@@ -48,6 +48,11 @@ while (running)
                 }
                 break;
 
+            case 3:
+                var search = await Rooms.SearchAsync();
+                // Bokningen lägger vi till i nästa steg
+                break;
+
             case 0:
                 running = false;
                 Console.WriteLine("Hej då!");
