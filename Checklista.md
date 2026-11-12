@@ -36,24 +36,24 @@ cd HolidayMaker/src/HolidayMaker
 ## 💻 Del 3: C#-programmet
 - [x] Skapa projektet och koppla till databasen
 - [x] Meny: registrera och välja kund
-- [ ] Meny: sök lediga rum (med filter och sortering)
-- [ ] Meny: boka (kolla tillgänglighet igen innan sparning)
-- [ ] Meny: visa bokningar
-- [ ] Meny: ändra antal personer
-- [ ] Meny: avboka
-- [ ] Felhantering (programmet kraschar inte vid fel inmatning)
+- [X] Meny: sök lediga rum (med filter och sortering)
+- [X] Meny: boka (kolla tillgänglighet igen innan sparning)
+- [X] Meny: visa bokningar
+- [X] Meny: ändra antal personer
+- [X] Meny: avboka
+- [X] Felhantering (programmet kraschar inte vid fel inmatning)
 
 ## 🧪 Del 4: Testa och dokumentera
-- [ ] Ledigt rum visas, upptaget filtreras bort
-- [ ] Kan checka in samma dag som någon checkar ut
-- [ ] Överlappande bokningar nekas (även när en omsluter en annan)
-- [ ] För stort sällskap nekas
-- [ ] Kombinerade filter och båda sorteringarna fungerar
-- [ ] Ändring av antal personer följer kapaciteten
-- [ ] Avbokning frigör rummet
-- [ ] Datan finns kvar efter omstart
+- [X] Ledigt rum visas, upptaget filtreras bort
+- [X] Kan checka in samma dag som någon checkar ut
+- [X] Överlappande bokningar nekas (även när en omsluter en annan)
+- [X] För stort sällskap nekas
+- [X] Kombinerade filter och båda sorteringarna fungerar
+- [X] Ändring av antal personer följer kapaciteten
+- [X] Avbokning frigör rummet
+- [X] Datan finns kvar efter omstart
 
 ## 📝 Del 5: Inlämning
-- [ ] Uppdatera ER-diagrammet och exportera som PDF/bild
-- [ ] README
-- [ ] Reflektion
+- [X] Uppdatera ER-diagrammet och exportera som PDF/bild
+- [X] README
+- [X] Reflektion
