@@ -26,6 +26,13 @@ while (running)
 
     int choice = Input.ReadInt("Välj: ", 0, 6);
 
+    // Val 4-6 gäller en kunds bokningar, så då måste en kund vara vald
+    if (choice >= 4 && customerId == null)
+    {
+        Console.WriteLine("Välj eller registrera en kund först (val 1 eller 2).");
+        continue;
+    }
+
     try
     {
         switch (choice)
@@ -59,13 +66,21 @@ while (running)
                 }
                 break;
 
+            case 4:
+                await Bookings.ShowAsync(customerId!.Value);
+                break;
+
+            case 5:
+                await Bookings.ChangeGuestsAsync(customerId!.Value);
+                break;
+
+            case 6:
+                await Bookings.CancelAsync(customerId!.Value);
+                break;
+
             case 0:
                 running = false;
                 Console.WriteLine("Hej då!");
-                break;
-
-            default:
-                Console.WriteLine("Kommer snart! 🚧");
                 break;
         }
     }

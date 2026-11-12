@@ -2,6 +2,8 @@
 
 Inlämning: fredag 13 november på Learnpoint
 
+cd HolidayMaker/src/HolidayMaker
+
 ## Veckoplan
 | Dag | Mål |
 |---|---|
