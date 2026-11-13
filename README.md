@@ -1,4 +1,4 @@
-# Holiday Maker
+# Holiday Maker (dotnet run --project src/HolidayMaker/HolidayMaker.csproj)
 
 Holiday Maker är ett konsolprogram för en resebyrå. En operatör sitter i
 telefon med en kund och hjälper hen att boka ett semesterboende. Programmet är
