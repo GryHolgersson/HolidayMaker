@@ -141,12 +141,13 @@ WHERE b.id = @bookingId
 -- 1 = ändrad, 0 = nekad (eller samma antal som innan)
 SELECT ROW_COUNT() AS andrade_bokningar;
 
-
 -- -----------------------------------------------------
--- 8. Avboka
 -- Raden tas bort, så rummet blir ledigt igen för perioden.
+-- Bara om bokningen tillhör den valda kunden.
 -- -----------------------------------------------------
-SET @bookingId = 26;
+SET @customerId = 1;
+SET @bookingId  = 26;
 
 DELETE FROM Booking
-WHERE id = @bookingId;
+WHERE id = @bookingId
+  AND customer_id = @customerId;
